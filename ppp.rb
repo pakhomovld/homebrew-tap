@@ -5,13 +5,13 @@
 class Ppp < Formula
   desc "Universal pipe pretty-printer. Auto-detects format, adds color."
   homepage "https://github.com/pakhomovld/ppp"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pakhomovld/ppp/releases/download/v0.3.1/ppp_darwin_amd64.tar.gz"
-      sha256 "a1bbbb5e0c3288a901e156ff981c6dff7ca984538e8b032ec300a71bd2b2f6f2"
+      url "https://github.com/pakhomovld/ppp/releases/download/v0.4.0/ppp_darwin_amd64.tar.gz"
+      sha256 "928010fd1da96c478d5849f87e3e1cdc28cbf3f25d81f8b89b6b31619dd2a571"
 
       define_method(:install) do
         bin.install "ppp"
@@ -19,8 +19,8 @@ class Ppp < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pakhomovld/ppp/releases/download/v0.3.1/ppp_darwin_arm64.tar.gz"
-      sha256 "549d5dc813919bd233456e2a372ef2dbc748d74c6254f6a9e8952eae01a80ce7"
+      url "https://github.com/pakhomovld/ppp/releases/download/v0.4.0/ppp_darwin_arm64.tar.gz"
+      sha256 "50800ac656b6fa9fb2ba1e9d4d0387f8c75be76b1fd84371e35ab8e040f48f97"
 
       define_method(:install) do
         bin.install "ppp"
@@ -31,16 +31,16 @@ class Ppp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pakhomovld/ppp/releases/download/v0.3.1/ppp_linux_amd64.tar.gz"
-      sha256 "92462788794bd04f6e21239d17cc4c3716734eb38255aa3d52d3fb0bad6617bc"
+      url "https://github.com/pakhomovld/ppp/releases/download/v0.4.0/ppp_linux_amd64.tar.gz"
+      sha256 "b345fe262219e50db2b9b98d5449d25e182d81caee37cf537536b855c8307c13"
       define_method(:install) do
         bin.install "ppp"
         man1.install "ppp.1"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pakhomovld/ppp/releases/download/v0.3.1/ppp_linux_arm64.tar.gz"
-      sha256 "752788f56075061d83c098226521bb4c44f31758ec1c7195ea9da3afeb8ba430"
+      url "https://github.com/pakhomovld/ppp/releases/download/v0.4.0/ppp_linux_arm64.tar.gz"
+      sha256 "04724b20c1c0472574dba991d8f6ed6fd13bbf5570228d1e564defb3bc70fc49"
       define_method(:install) do
         bin.install "ppp"
         man1.install "ppp.1"
